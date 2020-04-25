@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Index</title>
+
+<link href="inbox.css" type="text/css" rel="stylesheet"/>
+
+<script>
+
+var input,n;
+
+function cal()
+
+{switch(input)
+{case "sec":n=document.t.sec.value;
+with(document.t)
+{min.value=n/60;
+hr.value=min.value/60;
+day.value=hr.value/24;
+m.value=day.value/30;
+yr.value=m.value/12;
+d.value=yr.value/10;
+c.value=d.value/10;
+}
+break;
+case "min":n=document.t.min.value;
+with(document.t)
+{sec.value=n*60;
+hr.value=n/60;
+day.value=hr.value/24;
+m.value=day.value/30;
+yr.value=m.value/12;
+d.value=yr.value/10;
+c.value=d.value/10;
+}
+break;
+case "hr":n=document.t.hr.value;
+with(document.t)
+{sec.value=n*3600;
+min.value=n*60;
+day.value=n/24;
+m.value=day.value/30;
+yr.value=m.value/12;
+d.value=yr.value/10;
+c.value=d.value/10;
+}
+break;
+case "day":n=document.t.day.value;
+with(document.t)
+{hr.value=n*24;
+min.value=hr.value*60;
+sec.value=min.value*60;
+m.value=n/30.417;
+yr.value=n/365;
+d.value=n/3650;
+c.value=d.value/10;}
+break;
+case "m":n=document.t.m.value;
+with(document.t)
+{day.value=n*30.417;
+hr.value=day.value*24;
+min.value=hr.value*60;
+sec.value=min.value*60;
+yr.value=n/12;
+d.value=yr.value/10;
+c.value=d.value/10;}
+break;
+case "yr":n=document.t.yr.value;
+with(document.t)
+{m.value=n*12;
+day.value=m.value*30+(5*n);
+hr.value=day.value*24;
+min.value=hr.value*60;
+sec.value=min.value*60;
+d.value=n/10;
+c.value=d.value/10;}
+break;
+case "d":n=document.t.d.value;
+with(document.t)
+{yr.value=n*10;
+m.value=yr.value*12;
+day.value=m.value*30+(5*yr.value);
+hr.value=day.value*24;
+min.value=hr.value*60;
+sec.value=min.value*60;
+c.value=n/10;}
+break;
+case "c":n=document.t.c.value;
+with(document.t)
+{d.value=n*10;
+yr.value=d.value*10;
+m.value=yr.value*12;
+day.value=m.value*30+(5*yr.value);
+hr.value=day.value*24;
+min.value=hr.value*60;
+sec.value=min.value*60;
+}
+break;
+}
+}
+</script>
+</head>
+<body>
+<form name="t">
+<table cellspacing=24>
+<tr> <td><span>second:</span></td>
+ <td><input name="sec" onfocus="input='sec'" onchange="cal()"></td>
+ </tr>
+<tr> <td><span>minute:</span></td>
+ <td><input name="min" onfocus="input='min'" onchange="cal()"></td>
+ </tr>
+
+ <tr> <td><span>hour:</span></td>
+ <td><input name="hr" onfocus="input='hr'" onchange="cal()"></td>
+ </tr>
+ 
+<tr> <td><span>day:</span></td>
+ <td><input name="day" onfocus="input='day'" onchange="cal()"></td>
+ </tr>
+
+
+<tr> <td><span>month:</span></td>
+ <td><input name="m" onfocus="input='m'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>year:</span></td>
+ <td><input name="yr" onfocus="input='yr'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>decade:</span></td>
+ <td><input name="d" onfocus="input='d'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>century:</span></td>
+ <td><input name="c" onfocus="input='c'" onchange="cal()"></td>
+ </tr>
+ </table>
+</form>
+</body>
+</html>

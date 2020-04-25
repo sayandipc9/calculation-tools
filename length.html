@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Index</title>
+
+<link href="inbox.css" type="text/css" rel="stylesheet"/>
+
+<script>
+
+var input;
+
+function cal()
+
+{switch(input)
+
+{case 'nm':with(document.l)
+{mum.value=nm.value/1000;
+mm.value=mum.value/1000;
+cm.value=mm.value/10;
+i.value=cm.value/2.54;
+fo.value=i.value/12;
+y.value=fo.value/3;
+m.value=cm.value/100;
+km.value=m.value/1000;
+ml.value=y.value/1760;
+nml.value=km.value/1.852;
+}
+break;
+case "mum":with(document.l)
+{nm.value=mum.value*1000;
+mm.value=mum.value/1000;
+cm.value=mm.value/10;
+i.value=cm.value/2.54;
+fo.value=i.value/12;
+y.value=fo.value/3;
+m.value=cm.value/100;
+km.value=m.value/1000;
+ml.value=y.value/1760;
+nml.value=km.value/1.852;
+}
+break;
+case "mm":with(document.l)
+{
+}
+break;
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+<form name="l">
+ 
+<table cellspacing=24>
+<tr> <td><span>Nanometre:</span></td>
+ <td><input name="nm" onfocus="input='nm'" onchange="cal()"></td>
+ </tr>
+ <tr> <td><span>Micrometre:</span></td>
+ <td><input name="mum" onfocus="input='mum'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>Millimetre:</span></td>
+ <td><input name="mm" onfocus="input='mm'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>Centimetre:</span></td>
+ <td><input name="cm" onfocus="input='cm'" onchange="cal()"></td>
+ </tr>
+ 
+<tr> <td><span>Inch:</span></td>
+ <td><input name="i" onfocus="input='i'" onchange="cal()"></td>
+ </tr>
+ 
+<tr> <td><span>Foot:</span></td>
+ <td><input name="fo" onfocus="input='fo'" onchange="cal()"></td>
+ </tr>
+ 
+<tr> <td><span>Yard:</span></td>
+ <td><input name="y" onfocus="input='y'" onchange="cal()"></td>
+ </tr>
+ 
+<tr> <td><span>Metre:</span></td>
+ <td><input name="m" onfocus="input='m'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>Kilometre:</span></td>
+ <td><input name="km" onfocus="input='km'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>Mile:</span></td>
+ <td><input name="ml" onfocus="input='ml'" onchange="cal()"></td>
+ </tr>
+ 
+ <tr> <td><span>Nautical mile:</span></td>
+ <td><input name="nml" onfocus="input='nml'" onchange="cal()"></td>
+ </tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html>

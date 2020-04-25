@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Index</title>
+
+<link href="inbox.css" type="text/css" rel="stylesheet"/>
+
+<script>
+
+var input,n;
+
+function cal()
+
+{switch(input)
+
+{case 'c': with(document.t)
+{f.value=c.value*9/5+32;
+k.value=eval(c.value)+eval(273.15);
+r.value=k.value*9/5;
+ne.value=c.value*33/100;
+}
+break;
+case 'f':with(document.t)
+{n=f.value;
+c.value=(n-32)*5/9;
+k.value=(eval(n)+459.67)*5/9;
+r.value=eval(n)+459.67;
+ne.value=(n-32)*11/60;
+}
+break;
+case 'k':with(document.t)
+{n=k.value;
+c.value=n-273.15;
+f.value=n*9/5-459.67;
+r.value=n*9/5;
+ne.value=(n-273.15)*33/100;
+}
+break;
+case 'r':with(document.t)
+{n=r.value;
+c.value=(n-491.67)*5/9;
+f.value=n-459.67;
+k.value=n*5/9;
+ne.value=(n-491.67)*11/60;
+}
+break;
+case 'ne':with(document.t)
+{n=ne.value;
+c.value=n*100/33;
+f.value=n*60/11+32;
+k.value=n*100/33+273.15;
+r.value=n*60/11+491.67;
+}}
+}
+
+</script>
+
+</head>
+
+<body> 
+<form name="t">
+
+<table cellspacing=24>
+
+<tr> <td><span> degree Celsius:</span></td>
+ <td><input name="c" onfocus="input='c'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>degree Fahrenheit:</span></td>
+ <td><input name="f" onfocus="input='f'" onchange="cal()"></td>
+ </tr>
+
+<tr> <td><span>Kelvin:</span></td>
+ <td><input name="k" onfocus="input='k'" onchange="cal()"></td>
+ </tr>
+<tr> <td><span>Rankine:</span></td>
+ <td><input name="r" onfocus="input='r'" onchange="cal()"></td>
+ </tr>
+ <tr> <td><span>degree Newton:</span></td>
+ <td><input name="ne" onfocus="input='ne'" onchange="cal()"></td>
+ </tr>
+</table>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Base Converter</title>
+
+<script>
+var base,n;
+function cal()
+{switch(base)
+{case 'd':n=eval(document.f.d.value);
+document.f.b.value=n.toString(2);
+document.f.o.value=n.toString(8);
+document.f.h.value=n.toString(16);
+break;
+case 'b':n=parseInt(document.f.b.value,2);
+document.f.d.value=n;
+document.f.o.value=n.toString(8);
+document.f.h.value=n.toString(16);
+break;
+case 'o':n=parseInt(document.f.o.value,8);
+document.f.d.value=n;
+document.f.b.value=n.toString(2);
+document.f.h.value=n.toString(16);
+break;
+case 'h':n=parseInt(document.f.h.value,16);
+document.f.d.value=n;
+document.f.o.value=n.toString(8);
+document.f.b.value=n.toString(2);
+break;
+}
+}
+function set()
+{if(document.f.d.value!="")base='d';
+else if(document.f.b.value!="")base='b';
+else if(document.f.o.value!="")base='o';
+else if(document.f.h.value!="")base='h';
+else alert("please enter value.");
+cal();
+}
+</script>
+<style>
+input[type=text]{background-color:#5c5c5c;color:#09ff09;width:200%;height:30px;font-size:25px;border:4px outset #5eff5e;border-radius:10px;}
+span{font-size:25px;font-family:Gabriola;font-weight:bolder;color:#ffff0d;}
+.b{font-size:25px;font-family:Gabriola;font-weight:bolder;border:4px outset #5eff5e;border-radius:10px;background-color:#5eff5e;}
+.b:active{background-color:#ff5959;}
+</style>
+</head>
+
+<body bgcolor=#000000>
+
+ <form name="f">
+ 
+<table cellspacing=24>
+ 
+<tr>
+ 
+<td><span>Decimal:</span></td>
+ 
+<td> <input type="text" name="d"></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td><span>Binary:</span></td>
+ 
+<td> <input type="text" name="b"></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td><span>Octal:</span></td>
+ 
+<td> <input type="text" name="o"></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td><span>Hexadecimal:</span></td>
+ 
+<td> <input type="text" name="h"></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td align=center> <input type="button" value="convert" class=b onclick="set()"></td>
+<td align=center><input type="reset" value=clear class=b></td>
+ 
+</tr>
+ 
+</table>
+ 
+
+ </form>
+
+</body>
+
+</html>

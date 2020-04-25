@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+ <meta charset="UTF-8">
+
+<title>Calculator</title>
+
+ <script>
+
+ function cal()
+
+{var n=eval(document.f.t.value);
+ 
+ document.f.t.value=n;
+ }
+
+ </script>
+ 
+ <style>
+ 
+ .b
+  {height:50px;
+    width:50px;
+    font-size:20px;
+    }
+   
+.m{
+color:red;
+text-decoration-line:underline;}
+ </style>
+
+</head>
+
+<body>
+ 
+<form name="f">
+ 
+<table border=7 bgcolor="03feef" align="center">
+ 
+<tr align="center" valign="center">
+ 
+<td colspan="4"> <input type="text" name="t" value="" style="height:40px;font-size:20px;width:220px;"></td>
+ 
+</tr>
+
+ <tr align="center" valign="center">
+<td><input type="button" value="1" onClick="f.t.value+='1'" class="b"></td>
+
+ <td><input type="button" value="2" onClick="f.t.value+='2'" class="b"></td>
+
+<td><input type="button" value="3" onClick="f.t.value+='3'" class="b"></td>
+
+<td><input type="button" value="+" onClick="f.t.value+='+'" class="b"></td>
+ 
+</tr>
+ <tr align="center" valign="center">
+<td><input type="button" value="4" onClick="f.t.value+='4'" class="b"></td>
+
+ <td><input type="button" value="5" onClick="f.t.value+='5'" class="b"></td>
+ 
+<td><input type="button" value="6" onClick="f.t.value+='6'" class="b"></td>
+
+ <td><input type="button" value="-" onClick="f.t.value+='-'" class="b"></td>
+ 
+</tr>
+
+ <tr align="center" valign="center">
+<td><input type="button" value="7" onClick="f.t.value+='7'" class="b"></td>
+ 
+<td><input type="button" value="8" onClick="f.t.value+='8'" class="b"></td>
+
+ <td><input type="button" value="9" onClick="f.t.value+='9'" class="b"></td>
+
+ <td><input type="button" value="/" onClick="f.t.value+='/'" class="b"></td>
+ 
+</tr>
+
+ <tr align="center" valign="center">
+<td><input type="button" value="x" onClick="f.t.value+='*'" class="b"></td>
+ 
+<td><input type="button" value="0" onClick="f.t.value+='0'" class="b"></td>
+
+ <td><input type="button" value="." onClick="f.t.value+='.'" class="b"></td>
+
+ <td rowspan="2"><input type="button" value="=" onClick="cal()" style="height:106px;width:50px;font-size:20px;"></td>
+ 
+</tr>
+
+ <tr align="center" valign="center">
+ 
+<td><input type="reset" value="C" class="b"></td>
+
+ <td><input type="button" value="%" onClick="f.t.value+='%'" class="b"></td>
+ 
+<td><input type="button" value="()" onClick="f.t.value+=prompt('Enter bracket')" class="b"></td>
+ 
+</tr>
+
+ </table>
+
+ </form>
+</body>
+
+</html>
